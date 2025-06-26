@@ -23,6 +23,34 @@ public class addlast {
 
     }
 
+    public static void addAtMid(LinkedListNode head, char val, int pos) {
+        //step 1 : new node create;
+        LinkedListNode nn = new LinkedListNode(val);
+        LinkedListNode temp = head;
+
+        int curr = 0;
+        while (curr < pos - 1) {
+            temp = temp.add;
+            curr++;
+        }
+
+        nn.add = temp.add;
+        temp.add = nn;
+
+    }
+
+    public static LinkedListNode addFirst(LinkedListNode head, char val) {
+        //step 1 : new node create;
+        LinkedListNode temp = new LinkedListNode(val);
+
+        //step 2: temp ke address mein null ki jagah head ka address;
+        temp.add = head;
+
+        //step 3: update head;
+        head = temp;
+        return head;
+    }
+
     public static void addLast(LinkedListNode head, char val) {
 
         //step 1 : New node create karlo;
@@ -48,6 +76,12 @@ public class addlast {
         addLast(head, 'F');
         addLast(head, 'Z');
         addLast(head, 'K');
+
+        head = addFirst(head, 'z');
+        head = addFirst(head, 'y');
+
+        addAtMid(head, 'L', 3);
+        addAtMid(head, 'M', 4);
 
         traverse(head);
 
