@@ -21,6 +21,19 @@ public class llnodes {
         }
     }
 
+    public static Node addNodeAtLeft(Node newnode, int val) {
+        //Step 1 : Create a new node;
+        Node temp = new Node(val);
+
+        //step 2 : temp ke addrss mein head daal do;
+        temp.add = newnode;
+
+        //step 3 : update value of newnode;
+        newnode = temp;
+
+        return newnode;
+    }
+
     public static void addNodeAtRight(Node newnode, int val) {
         Node ptr = newnode;
         while (ptr.add != null) {
@@ -41,6 +54,11 @@ public class llnodes {
         addNodeAtRight(newnode, 8);
         addNodeAtRight(newnode, 9);
         addNodeAtRight(newnode, 10);
+
+        newnode = addNodeAtLeft(newnode, 4);
+        newnode = addNodeAtLeft(newnode, 3);
+        newnode = addNodeAtLeft(newnode, 2);
+        newnode = addNodeAtLeft(newnode, 1);
 
         traverse(newnode);
     }
