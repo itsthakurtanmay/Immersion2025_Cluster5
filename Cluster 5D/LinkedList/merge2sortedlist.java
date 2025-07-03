@@ -14,8 +14,8 @@ class Node {
 
 public class merge2sortedlist {
 
-    public static void merge2sortedll(Node head1,Node head2){
-        
+    public static void merge2sortedll(Node head1, Node head2) {
+
     }
 
     public static void traverse(Node head1) {
@@ -60,11 +60,9 @@ public class merge2sortedlist {
             addLast(head2, val);
         }
 
-        merge2sortedll(head1,head2);
+        merge2sortedll(head1, head2);
         traverse(head1);
         traverse(head2);
-
-
 
     }
 
